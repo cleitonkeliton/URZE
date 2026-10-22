@@ -26,6 +26,36 @@ p.lead{font-size:21px;line-height:1.6;color:#6E6255;font-weight:300;max-width:56
 .phone img{display:block;width:100%}
 .phone .in:before{content:"";position:absolute;top:12px;left:50%;width:110px;height:32px;margin-left:-55px;background:#141210;border-radius:20px;z-index:2}
 .cap{position:absolute;font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:#7A5A32;text-align:center}
+
+.duo .txt{position:absolute;left:110px;top:150px;width:600px}
+.duo h1{font-size:64px}
+.feat-l{list-style:none;margin-top:30px;display:grid;gap:16px}
+.feat-l li{display:grid;grid-template-columns:34px 1fr;font-size:19px;line-height:1.45;color:#4A3A2C}
+.feat-l li b{font-weight:500;color:#1A1714}
+.feat-l li:before{content:"✦";color:#B08A55;font-size:16px;margin-top:3px}
+.num{position:absolute;right:110px;top:90px;font-family:'Cormorant Garamond',serif;font-size:22px;color:#9A7644;letter-spacing:.2em}
+.flow{position:absolute;top:250px;left:0;right:0;display:flex;justify-content:center;gap:120px}
+.flow .st{position:relative;width:300px}
+.flow .phone{position:relative}
+.flow .st:not(:last-child):after{content:"→";position:absolute;right:-92px;top:300px;font-size:56px;color:#B08A55}
+.flow .lb{text-align:center;margin-top:22px}
+.flow .lb b{display:block;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500}
+.flow .lb span{font-size:16px;color:#6E6255}
+.flow .lb i{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1A1714;color:#fff;font-style:normal;font-size:15px;margin-bottom:10px}
+.pk{position:absolute;top:330px;left:110px;right:110px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.pk>div{background:#FBF7F1;border:1px solid #E3D8C9;padding:44px 40px;position:relative}
+.pk>div.rec{background:#1A1714;color:#EDE2D2;border-color:#1A1714;transform:translateY(-24px)}
+.pk .tg{position:absolute;top:-16px;left:40px;background:#B08A55;color:#fff;font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px}
+.pk h3{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:500}
+.pk .rec h3{color:#D4B27C}
+.pk p{font-size:17px;color:#6E6255;margin:6px 0 24px;line-height:1.5}
+.pk .rec p{color:#BFB2A2}
+.pk ul{list-style:none;display:grid;gap:15px;font-size:19px}
+.pk-note{position:absolute;left:110px;right:110px;bottom:90px;display:flex;justify-content:space-between;align-items:center;font-size:17px;color:#6E6255;border-top:1px solid rgba(122,90,50,.25);padding-top:26px}
+.pk-note b{display:inline-flex;align-items:center;gap:10px;color:#1A1714;font-weight:600}
+.pk li:before{content:"✓";color:#B08A55;margin-right:12px;font-weight:600}
+.pk li.plus{font-weight:500}
+.pk li.plus:before{content:"＋"}
 </style></head><body>
 
 <section class="slide" id="capa">
@@ -52,10 +82,104 @@ p.lead{font-size:21px;line-height:1.6;color:#6E6255;font-weight:300;max-width:56
   <div id="drow"></div>
 </section>
 
+
+<section class="slide" id="home-novidades">
+  <div class="eb">Página inicial · novas seções</div>
+  <h1 style="font-size:60px">Mais confiança, mais <em>contato</em></h1>
+  <div id="hrow"></div>
+</section>
+
+<section class="slide duo" id="produto">
+  <div class="txt">
+    <div class="eb">Página do produto</div>
+    <h1>Tudo para decidir <em>sem sair da página</em></h1>
+    <ul class="feat-l">
+      <li><span><b>Fotos e vídeo “ver no corpo”</b>, aproveitando os Reels da loja</span></li>
+      <li><span><b>Tamanhos com estoque real</b> e guia de medidas</span></li>
+      <li><span><b>“Avise-me”</b> quando a peça esgotada voltar</span></li>
+      <li><span><b>Preço no Pix em destaque</b>, entrega hoje e troca em 7 dias</span></li>
+      <li><span><b>Complete o look</b>: a cliente leva mais de uma peça</span></li>
+    </ul>
+  </div>
+  <div class="laptop" style="left:760px;top:180px;width:880px"><div class="scr"><img src="../imagens/desktop-produto.png"></div><div class="base"></div></div>
+  <div class="phone" style="left:1540px;top:390px;width:290px"><div class="in"><img src="../imagens/mobile-produto.png"></div></div>
+</section>
+
+<section class="slide" id="fluxo-whatsapp">
+  <div class="eb">Do site para o WhatsApp</div>
+  <h1 style="font-size:60px">A consultora recebe o pedido <em>pronto</em></h1>
+  <div class="flow">
+    <div class="st"><div class="phone" style="width:300px"><div class="in"><img src="../imagens/mobile-produto.png"></div></div><div class="lb"><i>1</i><b>Escolhe a peça</b><span>Cor, tamanho e quantidade</span></div></div>
+    <div class="st"><div class="phone" style="width:300px"><div class="in"><img src="../imagens/mobile-sacola.png"></div></div><div class="lb"><i>2</i><b>Monta a sacola</b><span>Entrega ou retirada, e a consultora</span></div></div>
+    <div class="st"><div class="phone" style="width:300px"><div class="in"><img src="../imagens/mobile-whatsapp.png"></div></div><div class="lb"><i>3</i><b>Finaliza no WhatsApp</b><span>Mensagem já escrita com o pedido completo</span></div></div>
+  </div>
+</section>
+
+<section class="slide duo" id="categoria">
+  <div class="txt">
+    <div class="eb">Catálogo</div>
+    <h1>Encontrar a peça certa <em>em segundos</em></h1>
+    <ul class="feat-l">
+      <li><span><b>Filtros por tamanho, cor, preço e ocasião</b></span></li>
+      <li><span><b>“Só peças com entrega hoje”</b> para quem tem pressa</span></li>
+      <li><span><b>No celular, filtros na parte de baixo da tela</b>, fáceis de alcançar com o polegar</span></li>
+      <li><span><b>Peças esgotadas continuam visíveis</b> e captam o contato da cliente</span></li>
+    </ul>
+  </div>
+  <div class="laptop" style="left:760px;top:180px;width:880px"><div class="scr"><img src="../imagens/desktop-categoria.png"></div><div class="base"></div></div>
+  <div class="phone" style="left:1540px;top:390px;width:290px"><div class="in"><img src="../imagens/mobile-categoria-filtros.png"></div></div>
+</section>
+
+<section class="slide duo" id="agendamento">
+  <div class="txt">
+    <div class="eb">Agendamento de visita</div>
+    <h1>O café da Urze, <em>agora com hora marcada</em></h1>
+    <ul class="feat-l">
+      <li><span><b>Dia e horário em poucos toques</b>, com horários ocupados bloqueados</span></li>
+      <li><span><b>Peças separadas no provador</b> antes da cliente chegar</span></li>
+      <li><span><b>Confirmação e lembrete pelo WhatsApp</b></span></li>
+      <li><span><b>A agenda aparece no painel da loja</b></span></li>
+    </ul>
+  </div>
+  <div class="laptop" style="left:760px;top:180px;width:880px"><div class="scr"><img src="../imagens/desktop-agendar.png"></div><div class="base"></div></div>
+  <div class="phone" style="left:1540px;top:390px;width:290px"><div class="in"><img src="../imagens/mobile-agendar.png"></div></div>
+</section>
+
+<section class="slide duo" id="painel">
+  <div class="txt">
+    <div class="eb">Painel da loja</div>
+    <h1>A loja atualiza o site <em>sozinha</em></h1>
+    <ul class="feat-l">
+      <li><span><b>Cadastrar uma peça pelo celular</b>, com fotos, preço e estoque por tamanho</span></li>
+      <li><span><b>Peças esgotadas saem do site sozinhas</b> e quem pediu aviso é avisada</span></li>
+      <li><span><b>Pedidos, agendamentos e peças mais vistas</b> em um só lugar</span></li>
+      <li><span><b>Avisa o Grupo VIP</b> quando uma novidade é publicada</span></li>
+    </ul>
+  </div>
+  <div class="laptop" style="left:760px;top:180px;width:880px"><div class="scr"><img src="../imagens/desktop-painel.png"></div><div class="base"></div></div>
+  <div class="phone" style="left:1540px;top:390px;width:290px"><div class="in"><img src="../imagens/mobile-painel.png"></div></div>
+</section>
+
+<section class="slide" id="pacotes">
+  <div class="eb">Formatos de projeto</div>
+  <h1 style="font-size:60px">Escolha o ponto de <em>partida</em></h1>
+  <div class="pk">
+    <div><h3>Essencial</h3><p>Site vitrine elegante e rápido, com o catálogo ligado ao WhatsApp.</p>
+      <ul><li>Página inicial completa</li><li>Catálogo e página do produto</li><li>Botão de comprar pelo WhatsApp</li><li>Informações: pagamentos, horário, trocas e entregas</li><li>Versão para celular e computador</li></ul></div>
+    <div class="rec"><span class="tg">Recomendado</span><h3>Profissional</h3><p>Tudo do Essencial, com as ferramentas que fazem a loja vender mais.</p>
+      <ul><li class="plus">Painel da loja (peças e estoque)</li><li>Sacola enviada pelo WhatsApp</li><li>Consultoras e feedbacks</li><li>Avise-me e Grupo VIP</li><li>Agendamento de visita</li><li>Aparecer no Google (SEO local)</li></ul></div>
+    <div><h3>Loja virtual</h3><p>Tudo do Profissional, com venda 100% online.</p>
+      <ul><li class="plus">Pagamento online: Pix e cartão</li><li>Cálculo de frete automático</li><li>Envio para todo o Brasil</li><li>Cupons e promoções</li><li>Relatórios de vendas</li></ul></div>
+  </div>
+  <div class="pk-note"><span>Valores, prazos e itens inclusos de cada formato estão detalhados na proposta comercial.</span><b>Desenvolvido por <svg width="30" height="30" viewBox="0 0 40 40"><rect width="40" height="40" rx="9" fill="#0F172A"/><path d="M9 11l6.5 18h2.6L24.5 11h-3.4l-4.3 12.6L12.4 11z" fill="#fff"/><path d="M29.5 10.5h3l-6.6 19h-3z" fill="#22C3EE"/></svg>valdev</b></div>
+</section>
+
 <script>
 const ms=[['mobile-inicio','Início'],['mobile-secao-1','Novidades'],['mobile-secao-2','Linha Festa'],['mobile-secao-3','Consultoras'],['mobile-secao-4','Informações']];
 document.getElementById('row').innerHTML=ms.map((m,i)=>`<div class="phone" style="left:${110+i*350}px;top:290px;width:310px"><div class="in"><img src="../imagens/${m[0]}.png"></div></div><div class="cap" style="left:${110+i*350}px;top:990px;width:310px">${m[1]}</div>`).join('');
 const ds=[['desktop-inicio','Início'],['desktop-secao-1','Novidades'],['desktop-secao-2','Linha Festa'],['desktop-secao-3','Consultoras'],['desktop-secao-4','Informações'],['desktop-secao-5','Localização']];
 document.getElementById('drow').innerHTML=ds.map((m,i)=>`<div class="laptop" style="left:${190+(i%3)*540}px;top:${265+Math.floor(i/3)*400}px;width:460px"><div class="scr" style="padding:12px 12px 14px;border-radius:14px 14px 0 0"><img src="../imagens/${m[0]}.png"></div><div class="base" style="height:16px;margin:0 -36px"></div></div><div class="cap" style="left:${190+(i%3)*540}px;top:${610+Math.floor(i/3)*400}px;width:460px">${m[1]}</div>`).join('');
+const hs=[['desktop-home-consultoras','Escolha da consultora','Cada cliente fala direto com quem prefere'],['desktop-home-feedbacks','Feedbacks','Depoimentos reais transmitem confiança'],['desktop-home-grupo-vip','Grupo VIP','Junta contatos para avisar das novidades']];
+document.getElementById('hrow').innerHTML=hs.map((m,i)=>`<div class="laptop" style="left:${110+i*580}px;top:330px;width:540px"><div class="scr" style="padding:12px 12px 14px;border-radius:14px 14px 0 0"><img src="../imagens/${m[0]}.png"></div><div class="base" style="height:16px;margin:0 -36px"></div></div><div class="cap" style="left:${110+i*580}px;top:740px;width:540px;text-transform:none;letter-spacing:0"><b style="display:block;font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;color:#1A1714;margin-bottom:6px">${m[1]}</b><span style="font-size:17px;color:#6E6255">${m[2]}</span></div>`).join('');
 </script>
 </body></html>
