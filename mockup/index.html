@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urze | Exclusiva pra você — Recife</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF7F1; --sand:#EFE6DA; --taupe:#C4B39D; --gold:#B08A55; --gold-2:#D4B27C;
+  --ink:#1A1714; --brown:#4A3A2C; --muted:#7B6F63; --line:#E3D8C9;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif; --ital:'Playfair Display',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 48px}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500}
+h2.title{font-family:var(--serif);font-weight:500;font-size:52px;line-height:1.05;letter-spacing:.01em}
+h2.title em{font-family:var(--ital);font-style:italic;font-weight:600;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;border-radius:2px}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-line{border:1px solid currentColor}
+.ico{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+/* topbar */
+.topbar{background:var(--ink);color:#E9DCC8;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:10px 16px}
+.topbar b{color:var(--gold-2);font-weight:500}
+
+/* header */
+header{background:var(--cream);border-bottom:1px solid var(--line);position:relative;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:32px;height:88px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand svg{width:52px;height:52px}
+.brand .wm{font-family:var(--serif);font-size:30px;letter-spacing:.42em;font-weight:500;line-height:1}
+.brand .wm small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.38em;color:var(--gold);margin-top:6px}
+.menu{display:flex;gap:26px;font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:500}
+.menu a.on{color:var(--gold)}
+.menu a.mfesta{font-family:var(--ital);font-style:italic;text-transform:none;letter-spacing:.02em;font-size:16px;color:var(--brown)}
+.icons{display:flex;gap:22px;align-items:center}
+.bag{position:relative}
+.bag i{position:absolute;top:-6px;right:-8px;background:var(--gold);color:#fff;font-style:normal;font-size:10px;width:16px;height:16px;border-radius:50%;display:grid;place-items:center}
+.burger{display:none}
+
+/* hero */
+.hero{position:relative;background:linear-gradient(180deg,var(--sand),var(--cream));overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center;min-height:680px;padding-top:40px;padding-bottom:56px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:84px;line-height:.98;margin:22px 0 26px}
+.hero h1 .hl{font-family:var(--ital);font-style:italic;font-weight:600;background:var(--gold);color:#fff;padding:0 14px 4px;display:inline-block;line-height:1.05}
+.hero p{font-size:18px;line-height:1.65;color:var(--muted);max-width:470px;font-weight:300}
+.hero .ctas{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.hero .stats{display:flex;gap:40px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.hero .stats b{font-family:var(--serif);font-size:34px;font-weight:500;display:block}
+.hero .stats span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.collage{position:relative;height:600px}
+.collage .a{position:absolute;right:0;top:0;width:66%;height:100%;border-radius:220px 220px 4px 4px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(74,58,44,.5)}
+.collage .b{position:absolute;left:0;bottom:40px;width:42%;height:52%;border-radius:4px;overflow:hidden;border:8px solid var(--cream);box-shadow:0 20px 40px -20px rgba(74,58,44,.5)}
+.collage .tag{position:absolute;left:4%;top:60px;background:var(--cream);padding:16px 20px;border-radius:2px;box-shadow:0 16px 30px -18px rgba(0,0,0,.35);width:200px}
+.collage .tag small{font-size:10px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+.collage .tag div{font-family:var(--ital);font-style:italic;font-size:22px;margin-top:4px}
+.collage .seal{position:absolute;right:-26px;bottom:-26px;width:124px;height:124px;filter:drop-shadow(0 10px 18px rgba(74,58,44,.3))}
+
+/* categories */
+.cats{padding:84px 0 40px}
+.cats-row{display:flex;justify-content:space-between;gap:20px;margin-top:40px}
+.cat{text-align:center;flex:1}
+.cat .ph{aspect-ratio:1;border-radius:50%;overflow:hidden;padding:5px;border:1px solid var(--gold-2);background:var(--cream)}
+.cat .ph img{border-radius:50%}
+.cat span{display:block;margin-top:14px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.sec-head a.more{font-size:12px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:4px;white-space:nowrap}
+
+/* products */
+.products{padding:60px 0 90px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:40px}
+.card .ph{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:2px;background:var(--sand)}
+.card .badge{position:absolute;top:14px;left:14px;background:var(--cream);font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:6px 10px;font-weight:500}
+.card .badge.g{background:var(--gold);color:#fff}
+.card .fav{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(251,247,241,.9);display:grid;place-items:center}
+.card .fav svg{width:17px;height:17px}
+.card .quick{position:absolute;left:12px;right:12px;bottom:12px;background:var(--ink);color:#fff;text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:13px}
+.card h3{font-family:var(--serif);font-size:23px;font-weight:500;margin-top:16px}
+.card .price{display:flex;gap:10px;align-items:baseline;margin-top:4px}
+.card .price b{font-weight:500;font-size:16px}
+.card .price s{color:var(--muted);font-size:13px}
+.card .pix{font-size:12px;color:var(--gold);margin-top:2px}
+.card .sw{display:flex;gap:6px;margin-top:10px}
+.card .sw i{width:13px;height:13px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+
+/* festa */
+.festa{background:var(--ink);color:#F1E6D6;position:relative;overflow:hidden}
+.festa .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center;padding-top:100px;padding-bottom:100px}
+.festa .pics{display:grid;grid-template-columns:1fr 1fr;gap:18px;height:560px}
+.festa .pics div{overflow:hidden;border-radius:2px}
+.festa .pics div:first-child{border-radius:200px 200px 2px 2px}
+.festa .pics div:last-child{margin-top:80px}
+.festa .script{font-family:var(--ital);font-style:italic;font-size:110px;line-height:.9;color:var(--gold-2);font-weight:600}
+.festa h2{font-family:var(--serif);font-size:30px;font-weight:400;letter-spacing:.5em;text-transform:uppercase;margin-top:14px}
+.festa p{font-size:17px;line-height:1.75;color:#BFB2A2;max-width:440px;margin:28px 0 38px;font-weight:300}
+.festa .btn-line{color:var(--gold-2)}
+
+/* experience */
+.exp{padding:110px 0}
+.exp .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.exp .imgs{position:relative;height:540px}
+.exp .imgs .m{position:absolute;inset:0 18% 0 0;overflow:hidden;border-radius:2px}
+.exp .imgs .s{position:absolute;right:0;bottom:-30px;width:44%;height:52%;overflow:hidden;border:8px solid var(--cream);border-radius:2px}
+.exp p{font-size:17px;line-height:1.8;color:var(--muted);margin:24px 0 34px;font-weight:300;max-width:500px}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:22px 30px;margin-bottom:38px}
+.feat{display:flex;gap:14px;align-items:flex-start}
+.feat .ic{width:44px;height:44px;flex:none;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--gold)}
+.feat b{display:block;font-weight:500;font-size:15px}
+.feat span{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* consultoras */
+.cons{background:var(--sand);padding:100px 0}
+.cons .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;align-items:center}
+.cons-card{background:var(--cream);border-radius:260px 260px 4px 4px;padding:56px 48px 44px;text-align:center;border:1px solid var(--line);position:relative}
+.cons-card .star{width:30px;margin:0 auto 10px;color:var(--gold)}
+.cons-card .lbl{font-family:var(--serif);letter-spacing:.42em;font-size:16px;color:var(--brown)}
+.cons-card .nm{font-family:var(--serif);font-size:60px;letter-spacing:.12em;color:var(--brown);line-height:1;margin:4px 0 26px}
+.cons-card .av{width:230px;height:230px;border-radius:50%;overflow:hidden;margin:0 auto 26px;border:6px solid var(--sand)}
+.cons-card .wa{display:flex;align-items:center;justify-content:center;gap:10px;background:#1F1B18;color:#fff;border-radius:40px;padding:15px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.cons-card .num{margin-top:16px;font-size:15px;color:var(--muted);letter-spacing:.08em}
+.steps{margin-top:34px;display:grid;gap:16px}
+.step{display:flex;gap:18px;align-items:center;background:var(--cream);padding:18px 22px;border-radius:2px}
+.step em{font-family:var(--serif);font-style:normal;font-size:34px;color:var(--gold);width:40px}
+.step b{font-weight:500;display:block}
+.step span{font-size:14px;color:var(--muted)}
+
+/* info */
+.info{padding:100px 0}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.box{border:1px solid var(--line);padding:38px 34px;background:#fff;border-radius:2px;position:relative}
+.box.dark{background:var(--ink);color:#EDE2D2;border-color:var(--ink)}
+.box.taupe{background:var(--taupe);color:#fff;border-color:var(--taupe)}
+.box .ic{width:52px;height:52px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;margin-bottom:22px;color:var(--gold)}
+.box.dark .ic{color:var(--gold-2)}.box.taupe .ic{color:#fff}
+.box h3{font-family:var(--serif);font-size:34px;font-weight:500;margin-bottom:18px}
+.box.dark h3{color:var(--gold-2)}
+.box ul{list-style:none;display:grid;gap:11px;font-size:15px;font-weight:300}
+.box li{display:flex;gap:10px}
+.box li:before{content:"✦";color:var(--gold);font-size:11px;margin-top:3px}
+.box.dark li:before{color:var(--gold-2)}.box.taupe li:before{color:#fff}
+.box small{display:block;margin-top:16px;font-size:12px;opacity:.75;line-height:1.5}
+.hours{display:grid;gap:14px}
+.hours div{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:12px;font-size:15px}
+.hours b{background:#fff;color:var(--brown);font-weight:500;padding:2px 10px;font-size:14px}
+.box .note{margin-top:18px;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+
+/* insta */
+.insta{padding:20px 0 100px;text-align:center}
+.insta .handle{font-family:var(--serif);font-size:44px;margin:12px 0 6px}
+.insta .handle em{font-family:var(--ital);color:var(--gold)}
+.insta .sub{color:var(--muted);font-size:15px}
+.feed{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:40px}
+.feed div{aspect-ratio:1;overflow:hidden}
+
+/* visit */
+.visit{background:var(--taupe);color:#fff;position:relative;overflow:hidden}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding-top:90px;padding-bottom:90px}
+.visit .pin{width:84px;margin-bottom:24px}
+.visit .eyebrow{color:#fff;opacity:.85}
+.visit h2{font-family:var(--serif);font-weight:400;font-size:58px;line-height:1.08;margin:16px 0 22px}
+.visit h2 .hl{font-family:var(--ital);font-style:italic;font-weight:600;background:var(--gold);padding:0 12px 4px}
+.visit h2 em{font-family:var(--ital);font-weight:600}
+.visit .addr{font-size:15px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.visit .ctas{display:flex;gap:14px;margin-top:34px}
+.visit .btn-dark{background:#fff;color:var(--brown)}
+.map{height:420px;border-radius:2px;overflow:hidden;position:relative;background:#E9E1D5}
+.map svg{width:100%;height:100%}
+.map .card{position:absolute;left:24px;bottom:24px;background:var(--cream);color:var(--ink);padding:16px 20px;display:flex;gap:14px;align-items:center;box-shadow:0 14px 30px -14px rgba(0,0,0,.4)}
+.map .card .thumb{width:58px;height:58px;overflow:hidden;border-radius:2px}
+.map .card b{font-family:var(--serif);font-size:20px;font-weight:600;display:block}
+.map .card span{font-size:12px;color:var(--muted)}
+
+/* footer */
+footer{background:var(--ink);color:#BFB2A2;padding:80px 0 30px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:50px}
+footer .brand{color:#F1E6D6}
+footer p{font-size:14px;line-height:1.7;margin-top:20px;max-width:300px}
+footer h4{color:#F1E6D6;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:11px;font-size:14px}
+.news{display:flex;margin-top:6px}
+.news input{flex:1;background:transparent;border:1px solid #4A4038;color:#fff;padding:14px;font:inherit;font-size:14px}
+.news button{background:var(--gold);color:#fff;border:0;padding:0 20px;font:inherit;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.pay{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}
+.pay span{border:1px solid #4A4038;padding:6px 10px;font-size:11px;letter-spacing:.1em}
+.fbot{border-top:1px solid #2E2823;margin-top:60px;padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.06em}
+.dev{display:inline-flex;align-items:center;gap:8px;color:#BFB2A2}
+.dev svg{width:24px;height:24px}
+.dev b{color:#fff;font-weight:600;font-size:14px;letter-spacing:0}
+.wafab{position:fixed;right:28px;bottom:28px;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.35);z-index:20}
+.wafab svg{width:32px;height:32px;fill:#fff}
+
+/* ===== mobile ===== */
+@media (max-width:760px){
+  .wrap{padding:0 20px}
+  .topbar{font-size:10px;padding:9px 12px}
+  .nav{height:68px}
+  .menu{display:none}
+  .burger{display:block}
+  .brand svg{width:40px;height:40px}
+  .brand .wm{font-size:22px}
+  .brand .wm small{font-size:7px}
+  .icons{gap:16px}
+  .icons .hide-m{display:none}
+  h2.title{font-size:36px}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;gap:34px;padding-top:30px;padding-bottom:50px}
+  .hero h1{font-size:50px;margin:16px 0 18px}
+  .hero p{font-size:16px}
+  .hero .ctas{margin-top:26px}
+  .hero .ctas .btn{flex:1;justify-content:center;padding:15px 14px;font-size:11px}
+  .hero .stats{gap:22px;margin-top:32px;padding-top:22px}
+  .hero .stats b{font-size:26px}.hero .stats span{font-size:10px}
+  .collage{height:330px;order:-1}
+  .topbar .hide-m{display:none}
+  .collage .a{width:74%}
+  .collage .b{width:44%;bottom:20px}
+  .collage .tag{top:24px;width:160px;padding:12px 14px}
+  .collage .tag div{font-size:18px}
+  .collage .seal{width:86px;height:86px;right:-6px;bottom:-14px}
+  .cats{padding:56px 0 20px}
+  .cats-row{overflow:hidden;justify-content:flex-start;gap:14px;margin-top:26px;margin-right:-20px}
+  .cat{flex:0 0 92px}
+  .cat span{font-size:10px;letter-spacing:.14em}
+  .sec-head{align-items:flex-end}
+  .products{padding:40px 0 60px}
+  .grid{grid-template-columns:1fr 1fr;gap:22px 14px;margin-top:28px}
+  .card .quick{display:none}
+  .card h3{font-size:19px;margin-top:10px}
+  .card .price b{font-size:14px}
+  .card .badge{font-size:8px;top:8px;left:8px;padding:5px 7px}
+  .card .fav{width:30px;height:30px;top:8px;right:8px}
+  .festa .wrap{grid-template-columns:1fr;gap:40px;padding-top:64px;padding-bottom:64px}
+  .festa .pics{height:360px;gap:12px}
+  .festa .pics div:last-child{margin-top:50px}
+  .festa .script{font-size:72px}
+  .festa h2{font-size:20px}
+  .exp{padding:70px 0}
+  .exp .wrap{grid-template-columns:1fr;gap:56px}
+  .exp .imgs{height:380px}
+  .feats{grid-template-columns:1fr;gap:16px}
+  .cons{padding:70px 0}
+  .cons .wrap{grid-template-columns:1fr;gap:40px}
+  .cons-card{padding:44px 26px 32px}
+  .cons-card .nm{font-size:44px}
+  .cons-card .av{width:190px;height:190px}
+  .info{padding:70px 0}
+  .info-grid{grid-template-columns:1fr;gap:16px;margin-top:30px}
+  .box{padding:30px 26px}
+  .insta{padding:0 0 70px}
+  .insta .handle{font-size:34px}
+  .feed{grid-template-columns:repeat(3,1fr);gap:4px;margin-top:28px}
+  .visit .wrap{grid-template-columns:1fr;padding-top:64px;padding-bottom:64px;gap:40px}
+  .visit h2{font-size:40px}
+  .visit .addr{font-size:12px}
+  .visit .ctas{flex-direction:column}
+  .visit .ctas .btn{justify-content:center}
+  .map{height:300px}
+  .fgrid{grid-template-columns:1fr 1fr;gap:36px 24px}
+  .fgrid > div:first-child,.fgrid > div:last-child{grid-column:1/-1}
+  .fbot{flex-direction:column;gap:10px;text-align:center;align-items:center}
+  .wafab{right:18px;bottom:18px;width:56px;height:56px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E2C48F"/><stop offset=".5" stop-color="#B08A55"/><stop offset="1" stop-color="#7A5A32"/></linearGradient>
+    <symbol id="star" viewBox="-50 -50 100 100">
+      <path fill="url(#g)" d="M0-46 L8-12 L44-14 L13 6 L27 40 L0 18 L-27 40 L-13 6 L-44-14 L-8-12Z"/>
+      <path fill="#FBF7F1" opacity=".9" d="M0-14 L4-4 L14-4 L6 3 L9 13 L0 7 L-9 13 L-6 3 L-14-4 L-4-4Z"/>
+      <circle r="3.5" fill="url(#g)"/>
+    </symbol>
+    <symbol id="seal" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="96" fill="#FBF7F1" stroke="#B08A55" stroke-width="2"/>
+      <circle cx="100" cy="100" r="70" fill="none" stroke="#B08A55" stroke-width="1"/>
+      <path id="arcT" d="M28 100 A72 72 0 0 1 172 100" fill="none"/>
+      <path id="arcB" d="M30 100 A70 70 0 0 0 170 100" fill="none"/>
+      <text font-family="Cormorant Garamond" font-size="19" letter-spacing="3" fill="#7A5A32"><textPath href="#arcT" startOffset="50%" text-anchor="middle">URZE EXCLUSIVA</textPath></text>
+      <text font-family="Cormorant Garamond" font-size="19" letter-spacing="3" fill="#7A5A32"><textPath href="#arcB" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">PARA VOCÊ</textPath></text>
+      <use href="#star" x="62" y="62" width="76" height="76"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="topbar">✦ Pix <b>sem taxas</b> &nbsp;·&nbsp; Entregas em todo Recife<span class="hide-m"> &nbsp;·&nbsp; Atendimento por consultoras exclusivas</span> ✦</div>
+
+<header>
+  <div class="wrap nav">
+    <svg class="ico burger" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+    <a class="brand" href="#"><svg><use href="#seal"/></svg><div class="wm">URZE<small>EXCLUSIVA PRA VOCÊ</small></div></a>
+    <nav class="menu">
+      <a class="on" href="#">Novidades</a><a href="#">Vestidos</a><a href="#">Conjuntos</a><a href="#">Macacões</a><a href="#">Jeans</a><a class="mfesta" href="#">Linha Festa</a><a href="#">Consultoras</a>
+    </nav>
+    <div class="icons">
+      <svg class="ico hide-m" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <svg class="ico hide-m" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg>
+      <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+      <span class="bag"><svg class="ico" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><i>2</i></span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Viva uma experiência · Recife</div>
+      <h1><span class="hl">Exclusiva</span> de moda feita para você</h1>
+      <p>Peças selecionadas a dedo, atendimento personalizado com nossas consultoras e um café esperando por você na loja do Coqueiral.</p>
+      <div class="ctas">
+        <a class="btn btn-dark" href="#">Ver nova coleção →</a>
+        <a class="btn btn-line" href="#">Falar com consultora</a>
+      </div>
+      <div class="stats">
+        <div><b>17,9 mil</b><span>clientes no Insta</span></div>
+        <div><b>+1.800</b><span>looks publicados</span></div>
+        <div><b>7 dias</b><span>para trocas</span></div>
+      </div>
+    </div>
+    <div class="collage">
+      <div class="a"><img src="img/festa-cetim.jpg" alt=""></div>
+      <div class="b"><img src="img/macacao-gabriela.jpg" alt=""></div>
+      <div class="tag"><small>Coleção nova</small><div>Linha Festa Urze</div></div>
+      <svg class="seal"><use href="#seal"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="cats">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Navegue por estilo</div><h2 class="title">Escolha o seu <em>momento</em></h2></div><a class="more" href="#">Ver tudo</a></div>
+    <div class="cats-row">
+      <a class="cat" href="#"><div class="ph"><img src="img/vestido-marrom.jpg"></div><span>Vestidos</span></a>
+      <a class="cat" href="#"><div class="ph"><img src="img/conjunto-verde.jpg"></div><span>Conjuntos</span></a>
+      <a class="cat" href="#"><div class="ph"><img src="img/macacao-preto.jpg"></div><span>Macacões</span></a>
+      <a class="cat" href="#"><div class="ph"><img src="img/festa-costas.jpg"></div><span>Festa</span></a>
+      <a class="cat" href="#"><div class="ph"><img src="img/corset-noite.jpg"></div><span>Jeans</span></a>
+      <a class="cat" href="#"><div class="ph"><img src="img/saia-amarela.jpg"></div><span>Saias</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="products">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Acabou de chegar</div><h2 class="title">Novidades da <em>semana</em></h2></div><a class="more" href="#">Ver coleção</a></div>
+    <div class="grid">
+      <div class="card"><div class="ph"><img src="img/macacao-preto.jpg"><span class="badge">Novo</span><span class="fav"><svg class="ico" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span><span class="quick">Adicionar à sacola</span></div><h3>Macacão Ágatha</h3><div class="price"><b>R$ 139,99</b></div><div class="pix">R$ 132,99 no Pix</div><div class="sw"><i style="background:#1E2433"></i><i style="background:#8FB79A"></i><i style="background:#E9E1D2"></i></div></div>
+      <div class="card"><div class="ph"><img src="img/macacao-gabriela.jpg"><span class="badge g">Mais vendido</span><span class="fav"><svg class="ico" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></div><h3>Macacão Gabriela</h3><div class="price"><b>R$ 159,99</b><s>R$ 189,99</s></div><div class="pix">R$ 151,99 no Pix</div><div class="sw"><i style="background:#8FB79A"></i><i style="background:#C8D86A"></i></div></div>
+      <div class="card"><div class="ph"><img src="img/vestido-marrom.jpg"><span class="badge">Novo</span><span class="fav"><svg class="ico" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></div><h3>Vestido Sereia Canelado</h3><div class="price"><b>R$ 119,99</b></div><div class="pix">R$ 113,99 no Pix</div><div class="sw"><i style="background:#4A2A22"></i><i style="background:#111"></i><i style="background:#B3201F"></i></div></div>
+      <div class="card"><div class="ph"><img src="img/conjunto-azul.jpg"><span class="fav"><svg class="ico" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></div><h3>Conjunto Capa Céu</h3><div class="price"><b>R$ 179,99</b></div><div class="pix">R$ 170,99 no Pix</div><div class="sw"><i style="background:#7FB1E3"></i><i style="background:#F2EDE4"></i></div></div>
+      <div class="card"><div class="ph"><img src="img/tomara-que-caia.jpg"><span class="fav"><svg class="ico" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></div><h3>Top Animal Print</h3><div class="price"><b>R$ 89,99</b></div><div class="pix">R$ 85,49 no Pix</div></div>
+      <div class="card"><div class="ph"><img src="img/conjunto-marrom.jpg"><span class="badge">Novo</span><span class="fav"><svg class="ico" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></div><h3>Conjunto Linho Cacau</h3><div class="price"><b>R$ 169,99</b></div><div class="pix">R$ 161,49 no Pix</div></div>
+      <div class="card"><div class="ph"><img src="img/vestido-verde.jpg"><span class="fav"><svg class="ico" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></div><h3>Vestido Lima Frente Única</h3><div class="price"><b>R$ 149,99</b></div><div class="pix">R$ 142,49 no Pix</div></div>
+      <div class="card"><div class="ph"><img src="img/calca-listrada.jpg"><span class="badge g">Últimas peças</span><span class="fav"><svg class="ico" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></span></div><h3>Calça Pantalona Listrada</h3><div class="price"><b>R$ 129,99</b></div><div class="pix">R$ 123,49 no Pix</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="festa">
+  <div class="wrap">
+    <div class="pics"><div><img src="img/festa-cetim.jpg"></div><div><img src="img/festa-costas.jpg"></div></div>
+    <div>
+      <div class="eyebrow" style="color:var(--gold-2)">Coleção especial</div>
+      <div class="script">Linha Festa</div>
+      <h2>Urze · mf</h2>
+      <p>Cetim, caimento fluido e detalhes que brilham. Looks pensados para casamentos, formaturas e noites que pedem uma entrada inesquecível.</p>
+      <a class="btn btn-line" href="#">Descobrir a linha festa →</a>
+    </div>
+  </div>
+</section>
+
+<section class="exp">
+  <div class="wrap">
+    <div class="imgs"><div class="m"><img src="img/loja.jpg"></div><div class="s"><img src="img/saia-cetim.jpg"></div></div>
+    <div>
+      <div class="eyebrow">Não é apenas um café</div>
+      <h2 class="title">É uma <em>experiência</em></h2>
+      <p>“Então vocês só vendem roupa, né?” Não! Na Urze você é recebida com café, provador aconchegante e uma consultora que entende o seu estilo — na loja ou pelo WhatsApp.</p>
+      <div class="feats">
+        <div class="feat"><div class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9zM17 10h2a2 2 0 0 1 0 4h-2M8 3v3M12 3v3"/></svg></div><div><b>Café com a gente</b><span>Sábados até às 18h, venha provar com calma</span></div></div>
+        <div class="feat"><div class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z"/></svg></div><div><b>Curadoria exclusiva</b><span>Coleções novas toda semana</span></div></div>
+        <div class="feat"><div class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.5"/><circle cx="17" cy="17.5" r="1.5"/></svg></div><div><b>Entregas</b><span>Receba em casa, em todo Recife</span></div></div>
+        <div class="feat"><div class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></div><div><b>Trocas fáceis</b><span>Até 7 dias com etiqueta na peça</span></div></div>
+      </div>
+      <a class="btn btn-dark" href="#">Agendar minha visita</a>
+    </div>
+  </div>
+</section>
+
+<section class="cons">
+  <div class="wrap">
+    <div class="cons-card">
+      <svg class="star" viewBox="-50 -50 100 100"><path fill="currentColor" d="M0-46 L5-5 L46 0 L5 5 L0 46 L-5 5 L-46 0 L-5-5Z"/></svg>
+      <div class="lbl">CONSULTORA</div>
+      <div class="nm">AMANDA</div>
+      <div class="av"><img src="img/amanda.jpg"></div>
+      <a class="wa" href="#"><svg style="width:18px;height:18px;fill:#fff" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Realize seu pedido aqui</a>
+      <div class="num">(81) 99709-5993</div>
+    </div>
+    <div>
+      <div class="eyebrow">Atendimento personalizado</div>
+      <h2 class="title">Compre com quem entende de <em>você</em></h2>
+      <p style="font-size:17px;line-height:1.8;color:var(--muted);margin-top:22px;font-weight:300;max-width:520px">Nossas consultoras montam looks sob medida, enviam fotos e vídeos das peças e cuidam do pedido do início à entrega. Escolha no site e finalize com um clique no WhatsApp.</p>
+      <div class="steps">
+        <div class="step"><em>01</em><div><b>Escolha suas peças</b><span>Navegue pelo catálogo e monte sua sacola</span></div></div>
+        <div class="step"><em>02</em><div><b>Fale com a consultora</b><span>Tire dúvidas de tamanho, cor e combinações</span></div></div>
+        <div class="step"><em>03</em><div><b>Receba ou retire na loja</b><span>Pague no Pix sem taxas ou no cartão</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="eyebrow">Tudo o que você precisa saber</div><h2 class="title">Compre com <em>tranquilidade</em></h2></div></div>
+    <div class="info-grid">
+      <div class="box dark">
+        <div class="ic"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div>
+        <h3>Pagamentos</h3>
+        <ul><li>Dinheiro</li><li>Pix (sem taxas)</li><li>Cartões de crédito e débito</li><li>Cartão via link</li></ul>
+        <small>*No cartão via link, as taxas são geradas pela própria administradora. Consulte antes do pagamento.</small>
+      </div>
+      <div class="box taupe">
+        <div class="ic"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Horário</h3>
+        <div class="hours"><div>Segunda a Sexta <b>10h às 19h</b></div><div>Sábado <b>10h às 18h</b></div></div>
+        <div class="note">✦ Não fechamos para almoço</div>
+      </div>
+      <div class="box">
+        <div class="ic"><svg class="ico" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v5h-5"/></svg></div>
+        <h3>Trocas</h3>
+        <ul><li>Trocas em até 7 dias com a etiqueta na peça</li><li>Não trocamos bolsas, cintos e acessórios</li><li>Nem peças de lurex, tule, renda, tricot e crochê</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="insta">
+  <div class="wrap">
+    <div class="eyebrow">Siga a gente</div>
+    <div class="handle"><em>@urzemf</em></div>
+    <div class="sub">17,9 mil seguidoras acompanhando os looks do dia</div>
+    <div class="feed">
+      <div><img src="img/saia-amarela.jpg"></div><div><img src="img/conjunto-cinza.jpg"></div><div><img src="img/vestido-branco.jpg"></div>
+      <div><img src="img/vestido-amarelo.jpg"></div><div><img src="img/colecao-nova.jpg"></div><div><img src="img/conjunto-branco.jpg"></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <div>
+      <svg class="pin" viewBox="0 0 100 130" fill="none" stroke="#fff" stroke-width="3"><path d="M50 126C50 126 8 76 8 46a42 42 0 0 1 84 0c0 30-42 80-42 80z"/><g transform="translate(50 46)"><path fill="#fff" stroke="none" d="M0-26 L5-7 L25-8 L8 4 L15 23 L0 11 L-15 23 L-8 4 L-25-8 L-5-7Z"/></g></svg>
+      <div class="eyebrow">Viva uma experiência</div>
+      <h2><span class="hl">Exclusiva</span> de <em>moda</em> feita para você</h2>
+      <div class="addr">R. Guanabara, Nº 34 · Bairro Coqueiral · Recife</div>
+      <div class="ctas"><a class="btn btn-dark" href="#">Como chegar</a><a class="btn btn-line" href="#">Chamar no WhatsApp</a></div>
+    </div>
+    <div class="map">
+      <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice">
+        <rect width="600" height="420" fill="#EDE6DB"/>
+        <g fill="#E2D8CA"><rect x="20" y="20" width="150" height="110" rx="4"/><rect x="200" y="20" width="170" height="110" rx="4"/><rect x="400" y="20" width="180" height="110" rx="4"/><rect x="20" y="170" width="150" height="100" rx="4"/><rect x="400" y="170" width="180" height="100" rx="4"/><rect x="20" y="300" width="150" height="110" rx="4"/><rect x="200" y="300" width="170" height="110" rx="4"/><rect x="400" y="300" width="180" height="110" rx="4"/></g>
+        <rect x="200" y="170" width="170" height="100" rx="4" fill="#D3E2C8"/>
+        <g stroke="#fff" stroke-width="14"><path d="M0 150H600M0 285H600M185 0V420M385 0V420"/></g>
+        <path d="M0 60 C150 90 300 40 600 110" stroke="#F4E3BE" stroke-width="10" fill="none"/>
+        <text x="420" y="145" font-family="Jost" font-size="12" fill="#9A8C7B">R. Guanabara</text>
+        <text x="30" y="278" font-family="Jost" font-size="12" fill="#9A8C7B">Coqueiral</text>
+        <g transform="translate(385 150)"><circle r="34" fill="#B08A55" opacity=".18"/><path d="M0 0c0 0-18-20-18-34a18 18 0 0 1 36 0C18-20 0 0 0 0z" fill="#1A1714"/><circle cy="-34" r="7" fill="#D4B27C"/></g>
+      </svg>
+      <div class="card"><div class="thumb"><img src="img/loja.jpg"></div><div><b>Urze · Loja física</b><span>Seg–Sex 10h–19h · Sáb 10h–18h</span></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><a class="brand" href="#"><svg><use href="#seal"/></svg><div class="wm">URZE<small>EXCLUSIVA PRA VOCÊ</small></div></a><p>Uma experiência exclusiva de moda feita para você. Loja física no Coqueiral, Recife, e atendimento online por consultoras.</p></div>
+      <div><h4>Loja</h4><ul><li>Novidades</li><li>Vestidos</li><li>Conjuntos</li><li>Linha Festa</li><li>Grupo VIP</li></ul></div>
+      <div><h4>Ajuda</h4><ul><li>Feedbacks</li><li>Trocas</li><li>Entregas</li><li>Pagamentos</li><li>Consultoras</li></ul></div>
+      <div><h4>Entre para o Grupo VIP</h4><div class="news"><input placeholder="Seu WhatsApp"><button>Entrar</button></div><div class="pay"><span>PIX</span><span>VISA</span><span>MASTER</span><span>ELO</span><span>DINHEIRO</span></div></div>
+    </div>
+    <div class="fbot"><span>© 2026 Urze Exclusiva pra Você · Recife – PE</span><span>Instagram @urzemf · (81) 99709-5993</span><a class="dev" href="#">Desenvolvido por <svg viewBox="0 0 40 40"><rect width="40" height="40" rx="9" fill="#fff"/><path d="M9 11l6.5 18h2.6L24.5 11h-3.4l-4.3 12.6L12.4 11z" fill="#0F172A"/><path d="M29.5 10.5h3l-6.6 19h-3z" fill="#22C3EE"/></svg><b>valdev</b></a></div>
+  </div>
+</footer>
+
+<a class="wafab" href="#"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Urze — Proposta de site</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1920px;height:1080px;overflow:hidden;font-family:Jost,sans-serif;color:#1A1714;
+ background:radial-gradient(1200px 700px at 75% 40%,#F3EADD 0,#E6D9C6 60%,#D9C8B0 100%)}
+.slide{display:none;position:relative;width:1920px;height:1080px;padding:90px 110px}
+.slide:target{display:block}
+.eb{font-size:15px;letter-spacing:.4em;text-transform:uppercase;color:#9A7644;font-weight:500}
+h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:84px;line-height:1;margin:20px 0 22px}
+h1 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;color:#B08A55}
+p.lead{font-size:21px;line-height:1.6;color:#6E6255;font-weight:300;max-width:560px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px;max-width:560px}
+.chips span{border:1px solid #B08A55;color:#7A5A32;padding:9px 16px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-radius:30px}
+.logo{display:flex;gap:16px;align-items:center;font-family:'Cormorant Garamond',serif;font-size:30px;letter-spacing:.42em}
+.logo i{width:12px;height:12px;background:#B08A55;transform:rotate(45deg);display:block}
+/* laptop */
+.laptop{position:absolute}
+.laptop .scr{background:#141210;border-radius:22px 22px 0 0;padding:22px 22px 26px;box-shadow:0 50px 90px -40px rgba(60,40,20,.6)}
+.laptop .scr img{display:block;width:100%;border-radius:3px}
+.laptop .base{height:26px;background:linear-gradient(#D9D6D1,#A9A5A0);border-radius:0 0 26px 26px;margin:0 -70px;position:relative}
+.laptop .base:before{content:"";position:absolute;left:50%;top:0;width:180px;height:10px;margin-left:-90px;background:#8F8B86;border-radius:0 0 12px 12px}
+/* phone */
+.phone{position:absolute;background:#141210;border-radius:58px;padding:14px;box-shadow:0 50px 80px -30px rgba(40,25,10,.6),inset 0 0 0 2px #3a332d}
+.phone .in{border-radius:46px;overflow:hidden;position:relative}
+.phone img{display:block;width:100%}
+.phone .in:before{content:"";position:absolute;top:12px;left:50%;width:110px;height:32px;margin-left:-55px;background:#141210;border-radius:20px;z-index:2}
+.cap{position:absolute;font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:#7A5A32;text-align:center}
+</style></head><body>
+
+<section class="slide" id="capa">
+  <div class="logo"><i></i>URZE</div>
+  <div style="margin-top:120px;max-width:600px">
+    <div class="eb">Proposta · Site institucional + catálogo</div>
+    <h1 style="font-size:70px">Uma experiência<br><em>exclusiva</em> também<br>no digital</h1>
+    <p class="lead">Site responsivo para a Loja Urze, com catálogo de peças, Linha Festa, atendimento direto com consultoras pelo WhatsApp e todas as informações da loja de Recife.</p>
+    <div class="chips"><span>Desktop</span><span>Mobile</span><span>Catálogo</span><span>WhatsApp</span><span>Instagram</span></div>
+  </div>
+  <div class="laptop" style="left:800px;top:170px;width:960px"><div class="scr"><img src="../imagens/desktop-inicio.png"></div><div class="base"></div></div>
+  <div class="phone" style="left:1560px;top:400px;width:300px"><div class="in"><img src="../imagens/mobile-inicio.png"></div></div>
+</section>
+
+<section class="slide" id="mobile-telas">
+  <div class="eb">Versão mobile</div>
+  <h1 style="font-size:64px">Pensado para quem compra <em>pelo celular</em></h1>
+  <div id="row"></div>
+</section>
+
+<section class="slide" id="desktop-telas">
+  <div class="eb" style="margin-top:-30px">Versão desktop</div>
+  <h1 style="font-size:56px;margin-bottom:0">Vitrine elegante <em>em tela cheia</em></h1>
+  <div id="drow"></div>
+</section>
+
+<script>
+const ms=[['mobile-inicio','Início'],['mobile-secao-1','Novidades'],['mobile-secao-2','Linha Festa'],['mobile-secao-3','Consultoras'],['mobile-secao-4','Informações']];
+document.getElementById('row').innerHTML=ms.map((m,i)=>`<div class="phone" style="left:${110+i*350}px;top:290px;width:310px"><div class="in"><img src="../imagens/${m[0]}.png"></div></div><div class="cap" style="left:${110+i*350}px;top:990px;width:310px">${m[1]}</div>`).join('');
+const ds=[['desktop-inicio','Início'],['desktop-secao-1','Novidades'],['desktop-secao-2','Linha Festa'],['desktop-secao-3','Consultoras'],['desktop-secao-4','Informações'],['desktop-secao-5','Localização']];
+document.getElementById('drow').innerHTML=ds.map((m,i)=>`<div class="laptop" style="left:${190+(i%3)*540}px;top:${265+Math.floor(i/3)*400}px;width:460px"><div class="scr" style="padding:12px 12px 14px;border-radius:14px 14px 0 0"><img src="../imagens/${m[0]}.png"></div><div class="base" style="height:16px;margin:0 -36px"></div></div><div class="cap" style="left:${190+(i%3)*540}px;top:${610+Math.floor(i/3)*400}px;width:460px">${m[1]}</div>`).join('');
+</script>
+</body></html>
